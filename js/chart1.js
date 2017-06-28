@@ -1,22 +1,5 @@
-<!DOCTYPE html>
-<meta charset="utf-8">
 
-
-
-<head>
-
-<link rel ="stylesheet" href="charts.css"></style>
-
-</head>
-
-
-
-<body>
-  <script src="//d3js.org/d3.v3.min.js"></script>
-
-  <script>
-
-    var margin = {top: 80, right: 20, bottom: 30, left: 40},
+    var margin = {top: 80, right: 40, bottom: 30, left: 40},
     width = 1000 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
@@ -42,13 +25,12 @@
     .orient("bottom")
     .tickFormat(formatPercent);
 
-
     var yAxis = d3.svg.axis()
     .scale(y)
     .orient("left")
     .tickFormat(function(d) {return '$' + d;});
 
-    var svg = d3.select("body").append("svg")
+    var svg = d3.select("#area1").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
     .append("g")
@@ -133,5 +115,3 @@
       .text(function(d) { return d; });
 
     });
-
-  </script>

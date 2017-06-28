@@ -1,92 +1,138 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
-<style> /* set the CSS */
+<head>
+	<link rel="stylesheet" href="css/charts.css"></style>
+	<link rel="stylesheet" href="css/bootstrap.min.css"></style>
+	<link rel="stylesheet" href="css/style.css"></style>
 
-body { font: 12px Arial;}
+</head>
 
-path { 
-    stroke: steelblue;
-    stroke-width: 2;
-    fill: none;
-}
-
-.axis path,
-.axis line {
-    fill: none;
-    stroke: grey;
-    stroke-width: 1;
-    shape-rendering: crispEdges;
-}
-
-</style>
 <body>
 
-<!-- load the d3.js library -->    
+
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.html">IDS Weekend</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav"></ul>
+
+				<ul class="nav navbar-nav navbar-right">
+
+<!-- 					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Words and Pictures<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+
+							<li><a href="http://www.idsnews.com/staff/bryan-brussee" target="_blank">The Indiana Daily Student</a></li>
+							<li><a href="http://thequietus.com/users/16691" target="_blank">The Quietus</a></li>
+
+							<li role="separator" class="divider"></li>
+							<li><a href="http://mediaschool.indiana.edu/iunewsnet/esports-smash-into-the-mainstream/" target="_blank">eSports (Multimedia project)</a></li>
+
+        <li><a href="science_forecast.html">Science Forecast (Video production)</a></li>
+
+        <li><a href="pine_leaf.html">Pine Leaf Boys (Video production)</a></li>
+
+    </ul>
+</li> -->
+
+<!-- <li class="dropdown">
+	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Code<span class="caret"></span></a>
+	<ul class="dropdown-menu">
+		<li><a href="life_expectancy_by_income.html">Life expectancy by income per capita (D3)</a></li>
+		<li><a href="sankey.html">Australian asylum-seeker flow (D3)</a></li>
+		<li><a href="ring_diagram.html">Asylum-seeker demographics (D3)</a></li>
+		<li><a href="earthquake.html">Earthquake magnitude map (Leaflet)</a></li>
+		<li role="separator" class="divider"></li>
+		<li><a href="http://specials.idsnews.com/woman-in-the-van/" target="_blank"> Lady in the Van (Bootstrap and Tableau)</a></li>
+		<li><a href="http://www.idsnews.com/article/2017/04/little-500-concert-canceled" target="_blank">Daily news infographic example (CodePen)</a></li>
+		<li role="separator" class="divider"></li>
+		<li><a href="https://github.com/Bryan-Brussee" target="_blank">Github</a></li>
+
+
+
+	</ul>
+</li> -->
+
+<!-- <li><a href="assets/Brussee_resume.pdf" target="_blank">Résumé</a></li>
+-->
+
+<!--       <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Contact<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="mailto:bryanbrussee17@gmail.com"><i class="fa fa-envelope fa-2x"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/bryan-brussee/" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a></li>
+
+        </ul>
+    </li> -->
+</ul>
+
+
+</div><!-- /.navbar-collapse -->
+
+</div><!-- /.container-fluid -->
+
+</nav>
+
+<div class="container">
+
+	<div class="row">
+		<div class="col-md-12">
+			<div id="area1"></div>
+
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore laboriosam totam aspernatur tempora! Vel officia enim, deleniti impedit, consequuntur veniam aspernatur repudiandae cupiditate sed accusantium esse beatae minima optio culpa.</p>
+			<p>Repellendus magnam autem, quis provident aut neque reiciendis sint. Quisquam reprehenderit doloribus nulla quidem. Dolore cumque quae assumenda reiciendis cupiditate. Sit quidem sint voluptas harum dolorum minus, soluta voluptates nisi.</p>
+			<p>Neque quasi harum odio, laborum hic quod, iusto iure architecto nostrum, nemo voluptatem facilis praesentium modi ab impedit laudantium. Facilis ipsam suscipit fugit, perferendis reiciendis sapiente eos laboriosam ducimus exercitationem?</p>
+			<p>Quibusdam, voluptatibus tempora odio obcaecati deserunt, dolorem nobis consequatur aliquam natus possimus, veritatis quisquam aspernatur autem ipsum neque officiis! Veritatis laborum magni nisi tempore voluptate voluptas tempora vero error earum.</p>
+
+
+
+			<div id="area2"></div>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime vero ipsam, repellendus vitae unde quisquam tempora incidunt laborum optio et placeat earum pariatur, excepturi eligendi ullam perspiciatis enim veniam nostrum.</p>
+			<p>A consectetur, esse dicta sint! Quam unde quibusdam earum molestias numquam, voluptates libero a! Est ipsum recusandae autem omnis quae doloremque, natus. Voluptate, officia quos, quisquam inventore nobis culpa alias.</p>
+			<p>Corrupti necessitatibus debitis eum, repellat maiores dignissimos eligendi repellendus doloribus nobis molestias harum earum laboriosam expedita distinctio reprehenderit doloremque neque tenetur velit cupiditate provident libero! Animi impedit placeat porro delectus.</p>
+			<p>Reprehenderit temporibus obcaecati nulla numquam adipisci, quis explicabo, non aspernatur, amet quos possimus laborum accusantium saepe, eum molestiae iusto ad corrupti. Placeat consequuntur quas minima delectus, quo aspernatur sapiente repudiandae.</p>
+
+			<div id="area3"></div>
+
+		</div>
+	</div>
+
+
+</div>
+
+<!-- load the d3.js library -->   
+<script src="http://code.jquery.com/jquery.js"></script> 
+<script src="js/bootstrap.min.js"></script> 
 <script src="http://d3js.org/d3.v3.min.js"></script>
 
-<script>
 
-// Set the dimensions of the canvas / graph
-var margin = {top: 30, right: 20, bottom: 30, left: 50},
-    width = 600 - margin.left - margin.right,
-    height = 270 - margin.top - margin.bottom;
 
-// Parse the date / time
-var parseDate = d3.time.format("%Y").parse;
 
-// Set the ranges
-var x = d3.time.scale().range([0, width]);
-var y = d3.scale.linear().range([height, 0]);
+<script src="js/chart1.js"></script>
 
-// Define the axes
-var xAxis = d3.svg.axis().scale(x)
-    .orient("bottom").ticks(5);
 
-var yAxis = d3.svg.axis().scale(y)
-    .orient("left").ticks(5);
+<script src="js/chart2.js"></script>
 
-// Define the line
-var valueline = d3.svg.line()
-    .x(function(d) { return x(d.year); })
-    .y(function(d) { return y(d.opening_gross); });
-    
-// Adds the svg canvas
-var svg = d3.select("body")
-    .append("svg")
-        .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom)
-    .append("g")
-        .attr("transform", 
-              "translate(" + margin.left + "," + margin.top + ")");
 
-// Get the data
-d3.csv("best_movies.csv", function(error, data) {
-    data.forEach(function(d) {
-        d.year = parseDate(d.year);
-        d.opening_gross = +d.opening_gross;
-    });
+<script src="js/chart3.js"></script>
 
-    // Scale the range of the data
-    x.domain(d3.extent(data, function(d) { return d.year; }));
-    y.domain([0, d3.max(data, function(d) { return d.opening_gross; })]);
 
-    // Add the valueline path.
-    svg.append("path")
-        .attr("class", "line")
-        .attr("d", valueline(data));
 
-    // Add the X Axis
-    svg.append("g")
-        .attr("class", "x axis")
-        .attr("transform", "translate(0," + height + ")")
-        .call(xAxis);
 
-    // Add the Y Axis
-    svg.append("g")
-        .attr("class", "y axis")
-        .call(yAxis);
 
-});
 
-</script>
 </body>
+</html>
